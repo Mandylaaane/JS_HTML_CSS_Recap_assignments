@@ -26,7 +26,10 @@ document.body.style.backgroundColor = "black";
 document.body.style.color = "orange";
 document.body.style.fontFamily = "Oswald, serif"; 
 
-//_____ALIGN FORM CENTER? 
+form[0].style.position = "absolute";
+form[0].style.top = "50%";
+form[0].style.left = "50%";
+form[0].style.transform = "translate(-50%, -50%)";
 form[0].style.border = "2px solid orange";
 form[0].style.borderRadius = "5px";
 form[0].style.margin = "2rem";
