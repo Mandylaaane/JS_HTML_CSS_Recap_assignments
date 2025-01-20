@@ -16,6 +16,8 @@ Style a HTML page, to make it look nice.
 
 JavaScript DOM Manipulation - complete script.js, style the form using only JavaScript.
 
+<<<<<<< HEAD
+=======
 ### Assignment 4
 
 JavaScript Event Handlers - add click events to all buttons in the JavaScript file. Use different techniques:
@@ -36,8 +38,13 @@ Fetch API and Promises.
 - Finish the GET request
 - Implement the POST request using FetchAPI and Promises
 
+>>>>>>> 161ba1be977b476961c9ba81604962411ef20f8b
 ## React Assignments
 
 ### Assignment 8
 
 Remember to run npm i in the folder react-assignments
+
+### Assignment 9
+
+Create a form and handle the data in state, and console.log.
