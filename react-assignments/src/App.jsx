@@ -1,6 +1,11 @@
 import "./App.css";
 // import PropsComponent from "./Components/MyStateComponent/PropsComponent";
-import FetchDataComponent from "./Components/Effect/EffectsComponent"
+import { BrowserRouter, Routes,Route } from "react-router";
+import Navbar from "./Components/Navbar/Navbar";
+import PersonDetails from "./Components/PersonDetails/PersonDetails";
+import MyStateComponent from "./Components/MyStateComponent/MyStateComponent";
+import FetchDataComponent from "./Components/Effect/EffectsComponent";
+
 
 function App() {
   const person = {
@@ -14,14 +19,19 @@ function App() {
   };
 
   return (
+    
     <div>
       <header>
         <h1>This is React</h1>
       </header>
-      {/* TODO create a child component in proper jsx, the component takes the person object as props and render the data */}
-      {/* <PropsComponent person={person} /> */}
-      <FetchDataComponent />
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<PersonDetails person={person}/>}/>
+        <Route path="/MyStateComponent" element={<MyStateComponent/>} />
+        <Route path="/EffectsComponent" element={<FetchDataComponent />} />
+      </Routes>  
     </div>
+   
   );
 }
 

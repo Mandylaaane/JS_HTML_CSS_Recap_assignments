@@ -8,18 +8,25 @@ import './StylesEffect.css';
 
 function FetchDataComponent() {
     const[data,setData] = useState(null);
+    const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
      fetch('https://thronesapi.com/api/v2/Characters')
      .then(response => response.json())
-     .then(data => setData(data));
+     .then(data => setData(data))
+     .catch(err => console.error(err))
+     .finally(setIsLoading(false))
     }, []); 
+
+    if(isLoading){
+        return <h2>Loading...</h2>
+    }
 
     return (
         <div>
             <h2>Game of Thrones Characters</h2>
             <ul>
-                {data.map(data => (
+                {data?.map(data => (
                     <li key={data.id}>{data.fullName}: {data.title}</li>
                 ))}
             </ul>
